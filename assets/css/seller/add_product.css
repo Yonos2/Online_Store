@@ -1,0 +1,17 @@
+.product-form-container {
+    max-width: 760px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.product-form-container h2 {
+    margin-bottom: 1.25rem;
+}
+
+.product-form-container .card-body {
+    padding: clamp(20px, 4vw, 32px) !important;
+}
+
+.product-form-container .btn {
+    padding: 10px 16px;
+}

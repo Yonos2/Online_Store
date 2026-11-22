@@ -1,0 +1,241 @@
+:root {
+    color-scheme: light;
+    --ink: #20312c;
+    --muted: #71807a;
+    --paper: #f7f6f1;
+    --surface: #fffefa;
+    --line: #e7e9e1;
+    --accent: #e77758;
+    --accent-dark: #c85c40;
+    --accent-soft: #fff0e9;
+    --green: #2f725c;
+    --green-soft: #e8f3ec;
+    --danger: #a9433e;
+    --shadow: 0 14px 40px rgba(32, 49, 44, 0.07);
+    --shadow-small: 0 5px 18px rgba(32, 49, 44, 0.06);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--paper);
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--ink);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 750;
+    letter-spacing: -0.035em;
+}
+
+a {
+    color: var(--green);
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--accent-dark);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+.btn {
+    border-radius: 12px;
+    font-weight: 700;
+    transition: background-color 160ms ease, color 160ms ease,
+        border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+button:not(:disabled):hover,
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),
+select,
+textarea {
+    border-color: #dce1da;
+    border-radius: 11px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(231, 119, 88, 0.28);
+    outline-offset: 2px;
+}
+
+::selection {
+    background: #f5c7b8;
+    color: var(--ink);
+}
+
+.bg-light {
+    background-color: var(--paper) !important;
+}
+
+.card {
+    border: 1px solid rgba(32, 49, 44, 0.06);
+    border-radius: 20px;
+    background: var(--surface);
+    box-shadow: var(--shadow-small);
+}
+
+.card-header {
+    border-bottom-color: var(--line);
+    border-radius: 20px 20px 0 0 !important;
+    background: #fbfaf6;
+    color: var(--ink);
+}
+
+.btn-primary,
+button.btn-primary {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-primary:hover,
+button.btn-primary:hover {
+    border-color: var(--accent-dark);
+    background: var(--accent-dark);
+    color: #fff;
+}
+
+.btn-secondary,
+button.btn-secondary {
+    border-color: #dce1da;
+    background: #eef0ea;
+    color: var(--ink);
+}
+
+.btn-secondary:hover,
+button.btn-secondary:hover {
+    border-color: #c8d0c8;
+    background: #e2e8e1;
+    color: var(--ink);
+}
+
+.btn-success {
+    border-color: var(--green);
+    background: var(--green);
+}
+
+.btn-warning {
+    border-color: #f3d9a3;
+    background: #fff2d6;
+    color: #795b1e;
+}
+
+.btn-danger {
+    border-color: #f3d7d1;
+    background: #fff0ed;
+    color: var(--danger);
+}
+
+.alert {
+    border: 1px solid transparent;
+    border-radius: 14px;
+}
+
+.alert-success {
+    border-color: #cfe5d6;
+    background: var(--green-soft);
+    color: #285d48;
+}
+
+.alert-danger {
+    border-color: #f1d0ca;
+    background: #fff0ed;
+    color: #8d3934;
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--ink);
+}
+
+.table > :not(caption) > * > * {
+    border-bottom-color: var(--line);
+}
+
+.table-dark {
+    --bs-table-bg: #263c35;
+    --bs-table-color: #fff;
+    --bs-table-border-color: #40564f;
+}
+
+.customer-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.customer-toolbar form,
+.logout-form {
+    display: inline-flex;
+    margin: 0;
+}
+
+.customer-toolbar button,
+.logout-button {
+    width: auto;
+    margin: 0;
+    padding: 8px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.customer-toolbar button {
+    border-color: #dce1da;
+    background: var(--surface);
+    color: var(--ink);
+}
+
+.customer-toolbar button:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+}
+
+.logout-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

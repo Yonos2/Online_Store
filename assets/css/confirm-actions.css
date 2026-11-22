@@ -1,0 +1,110 @@
+.action-confirm-dialog {
+    width: min(440px, calc(100vw - 32px));
+    max-width: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(32, 49, 44, 0.1);
+    border-radius: 22px;
+    background: var(--surface, #fffefa);
+    color: var(--ink, #20312c);
+    box-shadow: 0 24px 80px rgba(20, 32, 28, 0.28);
+}
+
+.action-confirm-dialog::backdrop {
+    background: rgba(20, 32, 28, 0.62);
+    backdrop-filter: blur(3px);
+}
+
+.action-confirm-panel {
+    display: grid;
+    justify-items: center;
+    padding: 30px 28px 24px;
+    text-align: center;
+}
+
+.action-confirm-icon {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: #fff2d6;
+    color: #795b1e;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.action-confirm-dialog.is-destructive .action-confirm-icon {
+    background: #fff0ed;
+    color: var(--danger, #a9433e);
+}
+
+.action-confirm-panel h2 {
+    margin: 0;
+    color: var(--ink, #20312c);
+    font-size: 22px;
+}
+
+.action-confirm-panel p {
+    margin: 9px 0 22px;
+    color: var(--muted, #71807a);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.action-confirm-actions {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-confirm-actions button {
+    min-width: 120px;
+    padding: 10px 16px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 750;
+}
+
+.action-confirm-cancel {
+    border-color: var(--line, #e7e9e1) !important;
+    background: var(--surface, #fffefa);
+    color: var(--ink, #20312c);
+}
+
+.action-confirm-cancel:hover {
+    background: #f3f4ee;
+}
+
+.action-confirm-submit {
+    background: var(--accent, #e77758);
+    color: #fff;
+}
+
+.action-confirm-submit:hover {
+    background: var(--accent-dark, #c85c40);
+}
+
+.action-confirm-dialog.is-destructive .action-confirm-submit {
+    background: var(--danger, #a9433e);
+}
+
+.action-confirm-dialog.is-destructive .action-confirm-submit:hover {
+    background: #873632;
+}
+
+@media (max-width: 480px) {
+    .action-confirm-panel {
+        padding: 26px 20px 20px;
+    }
+
+    .action-confirm-actions button {
+        min-width: 0;
+        flex: 1;
+    }
+}

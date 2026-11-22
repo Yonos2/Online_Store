@@ -1,0 +1,102 @@
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 28px 16px;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(231, 119, 88, 0.12), transparent 25%),
+        radial-gradient(circle at 90% 85%, rgba(47, 114, 92, 0.12), transparent 28%),
+        var(--paper);
+}
+
+.login-box {
+    width: min(440px, 100%);
+    padding: clamp(26px, 6vw, 42px);
+    border: 1px solid rgba(32, 49, 44, 0.06);
+    border-radius: 24px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.auth-brand {
+    margin-bottom: 25px;
+    color: var(--ink);
+    font-size: 25px;
+}
+
+.auth-brand:hover {
+    color: var(--ink);
+}
+
+.login-box .eyebrow {
+    margin-bottom: 7px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.login-box > p:not(.eyebrow) {
+    margin: 0 0 22px;
+    color: var(--muted);
+}
+
+label {
+    display: block;
+    margin-top: 16px;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 750;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 6px;
+    border: 1px solid #dce1da;
+    border-radius: 11px;
+    background: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 22px;
+    border: 0;
+    border-radius: 11px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    font-weight: 750;
+}
+
+button:hover {
+    background: var(--accent-dark);
+}
+
+.error,
+.registration-success {
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.error {
+    background: #fff0ed;
+    color: var(--danger);
+}
+
+.registration-success {
+    background: var(--green-soft);
+    color: var(--green);
+}
+
+.links {
+    margin-top: 18px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.links a {
+    font-weight: 700;
+}

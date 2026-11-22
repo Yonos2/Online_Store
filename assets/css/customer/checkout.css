@@ -1,0 +1,235 @@
+body {
+    min-height: 100vh;
+    padding: 30px 18px 70px;
+}
+
+.checkout-heading {
+    display: flex;
+    width: min(850px, 100%);
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin: 0 auto 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+}
+
+.checkout-brand {
+    color: var(--ink);
+    font-size: 26px;
+}
+
+.checkout-brand:hover {
+    color: var(--ink);
+}
+
+.checkout-brand span,
+.auth-brand span {
+    color: var(--accent);
+}
+
+.checkout-heading .eyebrow {
+    text-align: right;
+}
+
+.checkout-heading h1 {
+    margin: 0;
+    font-size: clamp(24px, 4vw, 34px);
+}
+
+.box {
+    width: min(850px, 100%);
+    margin: 0 auto 18px;
+    padding: clamp(20px, 4vw, 30px);
+    border: 1px solid rgba(32, 49, 44, 0.06);
+    border-radius: 20px;
+    background: var(--surface);
+    box-shadow: var(--shadow-small);
+}
+
+.box h2 {
+    margin: 0 0 14px;
+}
+
+.box p {
+    color: var(--muted);
+}
+
+.box .eyebrow {
+    margin-bottom: 4px;
+}
+
+.order-summary > p:not(.eyebrow) {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.order-summary h3 {
+    margin: 18px 0 0;
+    color: var(--accent-dark);
+    text-align: right;
+}
+
+label {
+    display: block;
+    margin: 16px 0 6px;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 750;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dce1da;
+    border-radius: 11px;
+    background: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.delivery-details form > p:not(.eyebrow) {
+    padding: 11px 14px;
+    border-radius: 10px;
+    background: #f3f4ee;
+}
+
+.payment-method-options {
+    margin: 20px 0;
+    padding: 0;
+    border: 0;
+}
+
+.payment-method-options legend {
+    margin-bottom: 8px;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.payment-method-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin: 8px 0;
+    padding: 13px 15px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.payment-method-option:has(input:checked) {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.payment-method-option:has(input:disabled) {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.payment-method-option input[type="radio"] {
+    width: auto;
+    margin: 3px 0 0;
+    accent-color: var(--accent);
+}
+
+.payment-method-option span {
+    display: grid;
+    gap: 2px;
+}
+
+.payment-method-option small {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 19px;
+    border: 0;
+    border-radius: 11px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    font-weight: 750;
+}
+
+button:hover {
+    background: var(--accent-dark);
+}
+
+.error {
+    width: min(850px, 100%);
+    margin: 0 auto 18px;
+    padding: 13px 16px;
+    border: 1px solid #f1d0ca;
+    border-radius: 12px;
+    background: #fff0ed;
+    color: var(--danger);
+}
+
+.success {
+    color: var(--green);
+}
+
+.checkout-success {
+    border-top: 4px solid var(--green);
+}
+
+.payment-result-message {
+    max-width: 430px;
+    padding: 11px 13px;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--ink) !important;
+}
+
+.payment-retry-link {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: white;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.payment-retry-link:hover {
+    background: var(--accent-dark);
+    color: white;
+}
+
+.checkout-success a {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: var(--green);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 560px) {
+    body {
+        padding: 18px 13px 44px;
+    }
+
+    .checkout-heading {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .checkout-heading .eyebrow {
+        text-align: left;
+    }
+}

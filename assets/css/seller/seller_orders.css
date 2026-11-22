@@ -1,0 +1,94 @@
+body {
+    min-height: 100vh;
+    padding: 38px 18px 70px;
+}
+
+.container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.card {
+    margin-bottom: 18px;
+    padding: clamp(18px, 3vw, 28px);
+    border: 1px solid rgba(32, 49, 44, 0.06);
+    border-radius: 20px;
+    background: var(--surface);
+    box-shadow: var(--shadow-small);
+}
+
+.card h1 {
+    margin-top: 0;
+    font-size: clamp(28px, 4vw, 38px);
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+}
+
+th, td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #f3f4ee;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+select, button {
+    padding: 9px 11px;
+}
+
+button {
+    border: 0;
+    background: var(--accent);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover {
+    background: var(--accent-dark);
+}
+
+.success {
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: var(--green-soft);
+    color: var(--green);
+}
+
+.error {
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #fff0ed;
+    color: var(--danger);
+}
+
+.address {
+    min-width: 180px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px 12px 44px;
+    }
+
+    th,
+    td {
+        padding: 11px 9px;
+    }
+}

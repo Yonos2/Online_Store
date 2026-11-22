@@ -1,0 +1,24 @@
+.product-image-thumbnail {
+    height: 180px;
+    object-fit: contain;
+    padding: 10px;
+    background: #f3f4ee;
+}
+
+.upload-preview-image {
+    max-height: 240px;
+    object-fit: contain;
+}
+
+.container.py-4 {
+    max-width: 1100px;
+    padding-top: 2rem !important;
+}
+
+.card-body {
+    padding: clamp(18px, 4vw, 30px);
+}
+
+.row.g-3 .card {
+    overflow: hidden;
+}

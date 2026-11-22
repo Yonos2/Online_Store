@@ -1,0 +1,171 @@
+.seller-app-header {
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 12px clamp(18px, 4vw, 48px);
+    border-bottom: 1px solid #e6e9e3;
+    background: rgba(255, 254, 250, 0.96);
+}
+
+.seller-app-brand {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 11px;
+    color: #20312c;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    text-decoration: none;
+}
+
+.seller-app-brand:hover {
+    color: #20312c;
+}
+
+.seller-app-brand small {
+    display: block;
+    margin-top: 5px;
+    color: #71807a;
+    font-size: 9px;
+    font-weight: 750;
+    letter-spacing: 0.13em;
+}
+
+.seller-brand-mark {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 13px;
+    background: #263c35;
+    color: #fffefa;
+    font-size: 19px;
+    letter-spacing: 0;
+}
+
+.seller-app-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.seller-app-nav a {
+    padding: 9px 12px;
+    border-radius: 10px;
+    color: #5e6d66;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.seller-app-nav a:hover,
+.seller-app-nav a[aria-current="page"] {
+    background: #edf3ee;
+    color: #285d48;
+}
+
+body:has(.seller-app-header) {
+    background: #f5f6f2;
+}
+
+body:has(.seller-app-header) > .container,
+body:has(.seller-app-header) > main,
+body:has(.seller-app-header) > .inventory-page,
+body:has(.seller-app-header) > .checkouts-page {
+    margin-top: 34px;
+}
+
+body:has(.seller-app-header) .container {
+    --bs-gutter-x: 1.5rem;
+}
+
+body:has(.seller-app-header) h1,
+body:has(.seller-app-header) h2,
+body:has(.seller-app-header) h3 {
+    color: #20312c;
+}
+
+body:has(.seller-app-header) .card,
+body:has(.seller-app-header) .inventory-card,
+body:has(.seller-app-header) .inventory-stat,
+body:has(.seller-app-header) .inventory-notification,
+body:has(.seller-app-header) .checkout-card,
+body:has(.seller-app-header) .checkouts-empty {
+    border-color: #e5e9e2;
+    box-shadow: 0 8px 26px rgba(32, 49, 44, 0.045);
+}
+
+body:has(.seller-app-header) .table-responsive,
+body:has(.seller-app-header) .inventory-table-wrap {
+    border-color: #e5e9e2;
+}
+
+body:has(.seller-app-header) .table th,
+body:has(.seller-app-header) .inventory-table-wrap thead th {
+    letter-spacing: 0.075em;
+}
+
+body:has(.seller-app-header) .form-label {
+    color: #43534c;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+body:has(.seller-app-header) .form-control,
+body:has(.seller-app-header) .form-select {
+    min-height: 42px;
+    border-color: #dce2da;
+    border-radius: 10px;
+}
+
+body:has(.seller-app-header) .btn {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+body:has(.seller-app-header) .btn-info {
+    border-color: #d8e9e1;
+    background: #e8f3ec;
+    color: #285d48;
+}
+
+body:has(.seller-app-header) .btn-info:hover {
+    border-color: #c3ddce;
+    background: #d8ecdf;
+    color: #214f3d;
+}
+
+@media (max-width: 760px) {
+    .seller-app-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 18px;
+    }
+
+    .seller-app-nav {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 2px;
+    }
+
+    .seller-app-nav a {
+        flex: 0 0 auto;
+    }
+
+    body:has(.seller-app-header) > .container,
+    body:has(.seller-app-header) > main,
+    body:has(.seller-app-header) > .inventory-page,
+    body:has(.seller-app-header) > .checkouts-page {
+        margin-top: 24px;
+    }
+}
