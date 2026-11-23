@@ -10,7 +10,9 @@ final class SellerDashboardController
 {
     public function index(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         if (
             !isset($_SESSION['user_id']) ||
             ($_SESSION['role'] ?? '') !== 'seller'
