@@ -1,5 +1,9 @@
 <?php
 
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+
 function app_base_path(): string
 {
     $scriptName = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? ''));
