@@ -12,7 +12,9 @@ final class CartController
 {
     public function show(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
 
         $database = new Database();
         $cart = new Cart($database->connect());
@@ -40,7 +42,9 @@ final class CartController
 
     public function add(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
 
         if (!$this->isCustomer()) {
             header('Location: ' . route_url('login'));
@@ -84,7 +88,9 @@ final class CartController
 
     public function updateOrRemove(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
 
         if (!$this->isCustomer()) {
             header('Location: ' . route_url('login'));
