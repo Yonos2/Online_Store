@@ -8,7 +8,9 @@ final class StoreController
 {
     public function index(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         $isCustomerLoggedIn = isset($_SESSION['user_id'])
             && ($_SESSION['role'] ?? '') === 'customer';
 
