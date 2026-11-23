@@ -9,7 +9,9 @@ final class ProductNotificationController
 {
     public function dismiss(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         $this->requireCustomer();
         $this->requirePost();
         $this->requireValidCsrf();
@@ -32,7 +34,9 @@ final class ProductNotificationController
 
     public function markRead(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         $this->requireCustomer();
         $this->requirePost();
         $this->requireValidCsrf();
