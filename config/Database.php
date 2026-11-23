@@ -39,7 +39,7 @@ class Database
             $port = 5432;
             $dbname = 'online_store';
             $username = 'postgres';
-            $password = 'PUT_YOUR_NEW_LOCAL_POSTGRES_PASSWORD_HERE';
+            $password = 'URfYaxDioOP3JTZHrOHiuqrATD1LuLyF';
             $sslmode = null;
         }
 
