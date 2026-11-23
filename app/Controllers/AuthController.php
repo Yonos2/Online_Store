@@ -11,7 +11,9 @@ final class AuthController
 {
     public function customerLogin(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
 
         if ($this->hasRole('customer')) {
             header('Location: ' . route_url('dashboard'));
@@ -56,7 +58,9 @@ final class AuthController
 
     public function register(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         $errors = [];
         $fullName = '';
         $email = '';
@@ -130,7 +134,9 @@ final class AuthController
 
     public function sellerLogin(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         if ($this->hasRole('seller')) {
             header('Location: ' . route_url('seller/dashboard'));
             exit;
@@ -177,7 +183,9 @@ final class AuthController
 
     private function logout(string $role, string $redirect): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
 
         if ($role === 'seller' && !$this->hasRole('seller')) {
             header('Location: ' . route_url('seller/login'));
