@@ -12,7 +12,9 @@ final class OrderController
 {
     public function index(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         if (!$this->isCustomer()) {
             header('Location: ' . route_url('login'));
             exit;
@@ -26,7 +28,9 @@ final class OrderController
 
     public function details(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         if (!$this->isCustomer()) {
             header('Location: ' . route_url('login'));
             exit;
@@ -63,7 +67,9 @@ final class OrderController
 
     public function pollUpdates(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         if (!$this->isCustomer()) {
             header('Location: ' . route_url('login'));
             exit;
@@ -108,7 +114,9 @@ final class OrderController
 
     public function success(): void
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
         if (!$this->isCustomer()) {
             header('Location: ' . route_url('login'));
             exit;
