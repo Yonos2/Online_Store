@@ -48,7 +48,7 @@
             <?php else: ?>
                 <p class="welcome-order-prompt">Sign up or log in to order.</p>
                 <div class="welcome-actions">
-                    <a href="/public/register.php">Sign Up</a>
+                    <a class="welcome-button welcome-button-primary" href="<?= route_url('register') ?>">Sign Up</a>
                     <a class="welcome-button welcome-button-secondary" href="<?= route_url('login') ?>">Log In</a>
                 </div>
             <?php endif; ?>
